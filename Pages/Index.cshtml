@@ -1,0 +1,234 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="main_container">
+    <section class="dashboard_hero">
+        <div class="dashboard_text">
+            <div class="hero_h1">
+                <h1>Bienvenue dans notre bibliothèque en ligne</h1>
+            </div>
+            <div class="hero_p">
+                <p>Découvrez une vaste collection de livres captivants, Plongez dans l'aventure littéraire dès
+                    aujourd'hui.
+            </div>
+            </p>
+            <div class="hero_a">
+                <a asp-page="/Livres/Index">Ajouter un livre</a>
+            </div>
+        </div>
+        <img src="/img/holo.png" alt="">
+    </section>
+    <div class="row_2_2">
+        <h2>Vous avez <span> @Model.recordsCount</span> enregistrements dans l'application</h2>
+    </div>
+    <div class="row_1">
+        <div class="cards">
+            <div class="card">
+                <i class='bx bx-cart card_icon'></i>
+                <h2><span>
+                        @Model.AuteurCount
+                    </span> Auteur(s)</h2>
+                <a asp-page="/Auteurs/Index">
+                    <i class='bx bx-right-arrow-alt'></i>
+                </a>
+            </div>
+
+            <div class="card">
+                <i class='bx bx-package card_icon'></i>
+                <h2><span>
+                        @Model.EditeurCount
+                    </span> Editeur(s)</h2>
+                <a asp-page="/Editeurs/Index">
+                    <i class='bx bx-right-arrow-alt'></i>
+                </a>
+            </div>
+
+            <div class="card">
+                <i class='bx bx-category-alt card_icon'></i>
+                <h2><span>
+                        @Model.CategorieCount
+                    </span> Catégorie(s)</h2>
+                <a asp-page="/Categories/Index">
+                    <i class='bx bx-right-arrow-alt'></i>
+                </a>
+            </div>
+            <div class="card">
+                <i class='bx bx-category-alt card_icon'></i>
+                <h2><span>
+                        @Model.LivreCount
+                    </span> Livre(s)</h2>
+                <a asp-page="/Livres/Index">
+                    <i class='bx bx-right-arrow-alt'></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row_2">
+        <div class="row_2_item">
+            <div class="title">
+                <h2>Livres</h2>
+                <a asp-page="/Livres/Index">Voir plus</a>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Titre</th>
+                        <th>ISBN</th>
+                        <th>Catégories</th>
+                        <th>Auteur</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var livre in Model.topListeLivres)
+                    {
+                        <tr>
+                            <td>@livre.Titre</td>
+                            <td>@livre.ISBN</td>
+                            <td>
+                                <a asp-page="/Categories/Details" asp-route-id="@livre.IDCat"> @livre.NomCat</a>
+                            </td>
+                            <td>
+                                <a asp-page="/Auteurs/Details" asp-route-id="@livre.IDAuteur"> @livre.NomAuteur</a>
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        @* <div class="row_2_item">
+            <div class="title">
+                <h2>Auteurs</h2>
+                <a asp-page="/Auteurs/Index">Voir plus</a>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Email</th>
+                        <th>Telephone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var auteur in Model.topListeAuteurs)
+                    {
+                        <tr>
+                            <td>@auteur.nom</td>
+                            <td>@auteur.email</td>
+                            <td>@auteur.telephone</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div> *@
+        <div id="livresByCategoryChart">
+            <p>Nombre des livres par catégories</p>
+        </div>
+
+
+    </div>
+    <footer></footer>
+</div>
+
+@section Scripts {
+    <script src="~/js/dashboard.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Fetch data from the model
+            var categories = @Html.Raw(Json.Serialize(Model.CategoriesForChart));
+            var livresCountByCategory = @Html.Raw(Json.Serialize(Model.LivresByCategory));
+            console.log(categories)
+            console.log(livresCountByCategory)
+            // Prepare data for ApexCharts
+
+            var chartData = Object.keys(livresCountByCategory).map(function (category) {
+                return {
+                    x: category,
+                    y: livresCountByCategory[category]
+                };
+            });
+            console.log(chartData)
+            // Set up ApexCharts
+            var options = {
+                chart: {
+                    type: 'bar',
+        @* height: 350, *@
+                width: 400,
+                    background: 'transparent'
+        },
+            grid: {
+            show: false
+        },
+            series: [{
+                data: chartData
+            }],
+            xaxis: {
+            categories: categories,
+            labels: {
+                show: false
+            },
+            axisBorder: {
+                show: false  // Set to false to hide the line under the x-axis labels
+            }
+        },
+            plotOptions: {
+            bar: {
+                horizontal: false,
+                columnWidth: '25%',
+                borderRadius: 3,
+                borderRadiusApplication: 'around',
+                borderRadiusWhenStacked: 'last',
+                endingShape: 'rounded',
+                distributed: true,
+                dataLabels: {
+                    position: 'bottom'
+                },
+            },
+        },
+            colors: ['#3513dc', '#853af3', '#ff555c', '#ff9a12', '#A5978B', '#2b908f', '#f9a3a4', '#90ee7e',
+            '#f48024', '#69d2e7'
+        ],
+            dataLabels: {
+            enabled: true
+        },
+            stroke: {
+            show: false,
+            width: 2,
+            colors: ['transparent']
+        },
+            yaxis: {
+            title: {
+        @* text: 'Number of Livres' *@
+                            },
+            labels: {
+            show: false
+        }
+                        },
+        @* title: {
+        text: 'Livre ',
+        align: 'center',
+        floating: true
+        }, *@
+            fill: {
+            opacity: 1
+        },
+            tooltip: {
+            y: {
+                formatter: function (val) {
+                    return val;
+                }
+            }
+        }
+                        };
+
+        console.log(options);
+        // Create the chart
+        var chart = new ApexCharts(document.querySelector("#livresByCategoryChart"), options);
+        chart.render();
+                    });
+    </script>
+}

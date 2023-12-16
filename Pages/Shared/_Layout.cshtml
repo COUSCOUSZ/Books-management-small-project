@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - GestionLivre</title>
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+    @* <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /> *@
+    <link rel="stylesheet" href="/css/sidenav.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/css/topnav.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/css/table.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/css/heading.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/css/controls.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/css/buttons.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/css/main_container.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/css/universal.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/css/instance.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/css/modal.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/css/loader.css" asp-append-version="true" />
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="~/GestionLivre.styles.css" asp-append-version="true" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@3.35.0/dist/apexcharts.min.css">
+    <link rel="icon" href="/img/logo_icon.png">
+
+</head>
+<body>
+    @await Html.PartialAsync("components/sidenav")
+
+    </div>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            <div id="main">
+                @* topnav start *@
+                @await Html.PartialAsync("components/topnav")
+                @* topnav end *@
+                @RenderBody()
+            </div>
+
+        </main>
+    </div>
+    <div class="fade_loader"></div>
+    <div class="loader_2"></div>
+    <div class="loader">
+        <div class="img">
+            <img class="logo" src="/img/logo_icon.png" alt="">
+            <img class="text" src="/img/logo_text.png" alt="">
+        </div>
+    </div>
+    @await Html.PartialAsync("components/modal")
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script defer src="/js/sidenav.js"></script>
+    <script src="/js/modal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+        integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/gsap_anim.js"></script>
+    @* <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.35.0/dist/apexcharts.min.js"></script> *@
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts@3"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

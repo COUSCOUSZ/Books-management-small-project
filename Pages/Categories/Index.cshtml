@@ -1,0 +1,134 @@
+﻿@page
+@model GestionLivre.Pages.Categories.IndexModel
+@{
+    ViewData["Title"] = "Categories";
+}
+
+<div id="main_container">
+    <!-- heading start -->
+    <div class="heading-container">
+        <div class="heading">
+            <div class="heading_title">
+                <div class="heading_links">
+                    <a href="index">Dashboard</a>
+                    <i class='bx bx-chevron-right'></i>
+                    <a href="/Auteurs" class="current_link">@ViewData["Title"]</a>
+                </div>
+                <h2>@ViewData["Title"]</h2>
+            </div>
+            <div class="heading_btn">
+                <a class="a_btn_primary" asp-page="Create">
+                    <i class='bx bx-plus'></i>
+                    Ajouter
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- heading end -->
+    @* alert start *@
+
+    @if (!String.IsNullOrEmpty(@Model.resultMessage))
+    {
+        @await Html.PartialAsync("components/alert")
+    }
+
+    @* alert end *@
+    <!-- controls start -->
+    @if (!string.IsNullOrEmpty(Model.search))
+    {
+        <section class="controls">
+
+            <div class="results_for">
+                (@Model.categoriesList.Count) résultats trouvés pour <span> @Model.search</span>
+            </div>
+            <div>
+                <div class="search_bar">
+                    <form method="get">
+                        <input type="text" id="search" name="search" placeholder="Rechercher par n'importe quel critère..."
+                            value="@Model.search">
+                        @* <button><i class='bx bx-search'></i></button> *@
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+                <a asp-page="Index" class="reset_btn">
+                    <i class='bx bx-reset'></i>
+                </a>
+            </div>
+        </section>
+    }
+    else
+    {
+        <section class="controls_lone">
+            <div class="search_bar_lone">
+                <div class="search_bar">
+                    <form method="get">
+                        <input type="text" id="search" name="search" placeholder="Rechercher par n'importe quel critère..."
+                            value="@Model.search">
+                        @* <button><i class='bx bx-search'></i></button> *@
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+                <a asp-page="Index" class="reset_btn">
+                    <i class='bx bx-reset'></i>
+                </a>
+            </div>
+        </section>
+    }
+    <!-- <div class="buttons_bar">
+
+                    <a href="#" class="a_btn_secondary"><i class='bx bx-export'></i> Excel</a>
+                </div> -->
+    <!-- controls end -->
+
+    @if (Model.categoriesList == null || Model.categoriesList.Count == 0)
+    {
+
+
+        <div class="not_found">
+            <img src="/img/notfound.png" alt="notfound ">
+            <h1>Aucun résultat trouvé</h1>
+            <p>N'hésitez pas à cliquer sur le bouton réinitialiser pour voir tous les enregistrements ou <a
+                    asp-page="Create">Ajouter un nouveau enregistrement</a></p>
+        </div>
+    }
+    else
+    {
+
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var category in Model.categoriesList)
+                    {
+                        <tr>
+                            <td>@category.IDCat</td>
+                            <td>@category.NomCat</td>
+                            <td>@(category.DescriptionCat.Length > 50 ? category.DescriptionCat.Substring(0, 50) + "..." :
+                                    category.DescriptionCat)</td>
+                            <td>
+                                <a class="td-actions" asp-page="Details" asp-route-id="@category.IDCat"><i
+                                        class='bx bx-right-arrow-alt'></i></a>
+                                <a class="td-actions" asp-page="Update" asp-route-id="@category.IDCat"><i
+                                        class='bx bx-pencil'></i></a>
+                                <a class="td-actions trigger_delete_modal" asp-page="Delete" asp-route-id="@category.IDCat"><i
+                                        class='bx bx-trash'></i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+
+
+</div>
+@section Scripts{
+     @await Html.PartialAsync("components/loader")
+}

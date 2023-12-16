@@ -1,0 +1,36 @@
+.heading-container{
+    border-bottom: 1px solid #ececec;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+    /* border-bottom: 1px solid #ececec; */
+}
+
+.heading_links{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.2rem;
+}
+
+.heading_links a{
+    color: #8d8f9f;
+    display: block;
+    font-size: 0.7rem;
+}
+
+.heading_links a:last-child{
+    color: #3c24ed;
+}
+
+.heading_links i{
+    color: #8d8f9f;
+    font-size: 0.8rem;
+    margin: 0 0.5rem;
+    vertical-align: middle;
+}

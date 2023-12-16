@@ -1,0 +1,46 @@
+﻿@*
+For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="sidenav">
+    <!-- <a href="javascript:void(0)" class="close_button">&times;</a> -->
+    <a asp-area="" asp-page="/Index" >
+        <img src="/img/logo.png" alt="" class="sidenav-logo">
+    </a>
+
+    <div class="sidenav-section">
+        <!-- <h4>Pages</h4> -->
+        <div class="sidenav-item-sole">
+            <div class="sidenav-direct-link">
+                <i class='bx bx-home'></i>
+                <a href="index">Dashboard</a>
+            </div>
+        </div>
+        <div class="sidenav-item active-list">
+            <div class="sidenav-title">
+                <p class="sidenav-title-btn">
+                    <i class='bx bx-store'></i>
+                    Gestion Livre
+                </p>
+                <i class="bx bx-chevron-down"></i>
+            </div>
+            <ul class="sidenav-list">
+                <li class="sidenav-link">
+                    <a asp-area="" asp-page="/Auteurs/Index"><i class='bx bx-user' undefined></i> Auteurs</a>
+                </li>
+                <li class="sidenav-link">
+                    <a asp-area="" asp-page="/Categories/Index"><i class='bx bx-category-alt' ></i> Catégories</a>
+                </li>
+                <li class="sidenav-link">
+                    <a asp-area="" asp-page="/Editeurs/Index"><i class='bx bx-message-square-edit' ></i> Editeurs</a>
+                </li>
+                <li class="sidenav-link">
+                    <a asp-area="" asp-page="/Livres/Index"><i class='bx bx-book-alt' ></i> Livres</a>
+                </li>
+            </ul>
+        </div>
+
+
+
+    </div>

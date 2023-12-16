@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<header class="header">
+            <nav class="topnav">
+                <div class="topnav-left" >
+                    <i class='bx bx-menu menu_button'></i>
+                </div>
+                <ul class="nav-list">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">
+                            <img src="img/pp.jpg" alt="" class="nav-img"> 
+                            <?php  echo $_SESSION['used']  ?>
+                            <i class='bx bx-chevron-down'></i>
+                        </a>
+                        <div class="dropdown-content">
+                            <!-- <a href="index.php"><i class='bx bx-notepad' ></i>Dashboard</a> -->
+                            <a asp-page=""><i class='bx bx-exit' ></i>Logout</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </nav>
+</header>

@@ -1,0 +1,145 @@
+﻿@page
+@model GestionLivre.Pages.Livres.IndexModel
+@{
+    ViewData["Title"] = "Livres";
+}
+
+<div id="main_container">
+    <!-- heading start -->
+    <div class="heading-container">
+        <div class="heading">
+            <div class="heading_title">
+                <div class="heading_links">
+                    <a href="index">Dashboard</a>
+                    <i class='bx bx-chevron-right'></i>
+                    <a href="/Auteurs" class="current_link">@ViewData["Title"]</a>
+                </div>
+                <h2>@ViewData["Title"]</h2>
+            </div>
+            <div class="heading_btn">
+                <a class="a_btn_primary" asp-page="Create">
+                    <i class='bx bx-plus'></i>
+                    Ajouter
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- heading end -->
+        <!-- controls start -->
+    @if (!string.IsNullOrEmpty(Model.search))
+    {
+        <section class="controls">
+
+            <div class="results_for">
+                (@Model.listeLivres.Count) résultats trouvés pour <span> @Model.search</span>
+            </div>
+            <div>
+                <div class="search_bar">
+                    <form method="get">
+                        <input type="text" id="search" name="search" placeholder="Rechercher par n'importe quel critère..."
+                            value="@Model.search">
+                        @* <button><i class='bx bx-search'></i></button> *@
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+                <a asp-page="Index" class="reset_btn">
+                    <i class='bx bx-reset'></i>
+                </a>
+            </div>
+        </section>
+    }
+    else
+    {
+        <section class="controls_lone">
+            <div class="search_bar_lone">
+                <div class="search_bar">
+                    <form method="get">
+                        <input type="text" id="search" name="search" placeholder="Rechercher par n'importe quel critère..."
+                            value="@Model.search">
+                        @* <button><i class='bx bx-search'></i></button> *@
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+                <a asp-page="Index" class="reset_btn">
+                    <i class='bx bx-reset'></i>
+                </a>
+            </div>
+        </section>
+    }
+    <!-- <div class="buttons_bar">
+
+                    <a href="#" class="a_btn_secondary"><i class='bx bx-export'></i> Excel</a>
+                </div> -->
+    <!-- controls end -->
+
+    @* <p>
+    <a class="td-actions" asp-page="Create">Create New</a>
+    </p> *@
+
+@if (Model.listeLivres == null || Model.listeLivres.Count == 0)
+    {
+
+
+        <div class="not_found">
+            <img src="/img/notfound.png" alt="notfound ">
+            <h1>Aucun résultat trouvé</h1>
+            <p>N'hésitez pas à cliquer sur le bouton réinitialiser pour voir tous les enregistrements ou <a
+                    asp-page="Create">Ajouter un nouveau enregistrement</a></p>
+        </div>
+    }
+    else{
+
+    <div class="table-container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Titre</th>
+                    <th>ISBN</th>
+                    <th>Editeur</th>
+                    <th>Auteur</th>
+                    <th>Categorie</th>
+                    @* <th>Description</th> *@
+                    <th>Année d'édition</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var livre in Model.listeLivres)
+                {
+                    <tr>
+                        <td>@livre.IDLivre</td>
+                        <td>@livre.Titre</td>
+                        <td>@livre.ISBN</td>
+                        <td>
+                            <a asp-page="/Editeurs/Details" asp-route-id="@livre.IDEditeur"> @livre.NomEditeur</a>
+                            </td>
+                        <td>
+                            <a asp-page="/Auteurs/Details" asp-route-id="@livre.IDAuteur"> @livre.NomAuteur</a>
+                            
+                        </td>
+                        <td>
+                            <a asp-page="/Categories/Details" asp-route-id="@livre.IDCat"> @livre.NomCat</a>
+                        </td>
+                        @* <td>@livre.DescripLivre</td> *@
+                        <td>@(livre.AnneeEdition.HasValue ? livre.AnneeEdition.Value.ToString() : "")</td>
+                        <td>
+                            <a class="td-actions" asp-page="Details" asp-route-id="@livre.IDLivre"><i
+                                    class='bx bx-right-arrow-alt'></i></a>
+                            <a class="td-actions" asp-page="Update" asp-route-id="@livre.IDLivre"><i
+                                    class='bx bx-pencil'></i></a>
+                            <a class="td-actions td-actions trigger_delete_modal" asp-page="Delete"
+                                asp-route-id="@livre.IDLivre"><i class='bx bx-trash'></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    }
+
+
+</div>
+@section Scripts{
+     @await Html.PartialAsync("components/loader")
+}

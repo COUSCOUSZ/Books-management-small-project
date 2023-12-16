@@ -1,0 +1,115 @@
+.modal {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #ffffffac;
+    backdrop-filter: blur(0.2rem);
+    /* animation-name: blur;
+    animation-duration: 0.4s;
+    transition: opacity 0.4s ease; */
+}
+
+.modal_flex {
+    display: flex;
+    transition: opacity 0.4s ease;
+}
+
+.modal_content.fade-out {
+    opacity: 0;
+}
+
+.modal_content {
+    width: 31rem;
+    margin: auto 1rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e2e2e2;
+    background-color: #fff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -4px rgba(0, 0, 0, .1);
+    /* animation-name: scale;
+    animation-duration: 0.4s;
+    transition: opacity 0.4s ease; */
+}
+
+.modal .title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-block: 0.1rem 0.65rem;
+}
+
+.modal p {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.3;
+    color: hsl(240 3.8% 46.1%);
+}
+
+.modal_buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.modal_buttons button {
+    cursor: pointer;
+    padding-block: 0.65rem;
+    padding-inline: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 0.4rem;
+    transition: 0.3s ease;
+}
+
+.modal_buttons #modal_cancel {
+    border: 1px solid #e2e2e2;
+    background-color: #fff;
+}
+
+.modal_buttons #modal_cancel:hover {
+    background-color: #efefef;
+}
+
+.modal_buttons #modal_accept {
+    color: #fff;
+    background-color: #1b1b59;
+    border: 1px solid #1b1d59;
+}
+
+.modal_buttons #modal_accept:hover {
+    border: 1px solid #201e62;
+    background-color: #28238c;
+}
+
+@media screen and (max-width:400px)  {
+    
+}
+
+
+@keyframes blur {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scale {
+    from {
+        top: -50px;
+        scale: 0.8;
+    }
+
+    to {
+        top: 0;
+        scale: 1;
+    }
+}

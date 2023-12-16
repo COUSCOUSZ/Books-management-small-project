@@ -1,0 +1,156 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = GestionLivre
+build_property.RootNamespace = GestionLivre
+build_property.ProjectDir = E:\DEV\EMSI\4IIRG4\c# .net\.NET\controle\GestionLivre\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\DEV\EMSI\4IIRG4\c# .net\.NET\controle\GestionLivre
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Auteurs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0ZXVyc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Auteurs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0ZXVyc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Auteurs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0ZXVyc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Auteurs/test.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0ZXVyc1x0ZXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Auteurs/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0ZXVyc1xVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Categories/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Categories/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Categories/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Categories/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Categories/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Editeurs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdGV1cnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Editeurs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdGV1cnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Editeurs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdGV1cnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Editeurs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdGV1cnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Editeurs/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdGV1cnNcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Livres/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGl2cmVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Livres/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGl2cmVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Livres/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGl2cmVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Livres/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGl2cmVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Livres/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGl2cmVzXFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Shared/components/alert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXGNvbXBvbmVudHNcYWxlcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Shared/components/loader.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXGNvbXBvbmVudHNcbG9hZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Shared/components/modal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXGNvbXBvbmVudHNcbW9kYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Shared/components/notfound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXGNvbXBvbmVudHNcbm90Zm91bmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Shared/components/sidenav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXGNvbXBvbmVudHNcc2lkZW5hdi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Shared/components/topnav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXGNvbXBvbmVudHNcdG9wbmF2LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Shared/_Layout copy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQgY29weS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Auteurs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0ZXVyc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-mpbkrrztq6
+
+[E:/DEV/EMSI/4IIRG4/c\# .net/.NET/controle/GestionLivre/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-g8dhf9ai80

@@ -1,0 +1,50 @@
+﻿@page
+@model GestionLivre.Pages.Categories.UpdateModel
+@{
+    ViewData["Title"] = "Update Categorie";
+}
+
+<div id="main_container">
+    <!-- heading start -->
+    <div class="heading-container">
+        <div class="heading">
+            <div class="heading_title">
+                <div class="heading_links">
+                    <a href="index">Dashboard</a>
+                    <i class='bx bx-chevron-right'></i>
+                    <a href="/Auteurs" class="current_link">@ViewData["Title"]</a>
+                </div>
+                <h2>@ViewData["Title"]</h2>
+            </div>
+        </div>
+    </div>
+    <!-- heading end -->
+    @* zwa9 start *@
+    <div class="form_all_container">
+        <div class="rectangle">
+
+        </div>
+        <div class="form_container">
+            <div class="form">
+                <h2>@ViewData["Title_2"] Info</h2>
+                <form method="post">
+                    <div class="form-group">
+                        <label asp-for="NomCat"></label>
+                        <input asp-for="NomCat" class="form-control" placeholder="eg. Jk amber" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DescriptionCat"></label>
+                        <input asp-for="DescriptionCat" class="form-control" placeholder="eg. jkamber@mail.com" />
+                    </div>
+                    <div class="button_container">
+                        <a asp-page="index"><i class='bx bx-chevron-left'></i> go back</a>
+                        <button type="submit" class="a_primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    @* zwa9 end *@
+
+</div>

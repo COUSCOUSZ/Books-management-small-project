@@ -1,0 +1,78 @@
+﻿@page
+@model GestionLivre.Pages.Editeurs.DetailsModel
+@{
+    ViewData["Title"] = "Editeur Details";
+}
+
+<div id="main_container">
+    <!-- heading start -->
+    <div class="heading-container">
+        <div class="heading">
+            <div class="heading_title">
+                <div class="heading_links">
+                    <a href="index">Dashboard</a>
+                    <i class='bx bx-chevron-right'></i>
+                    <a href="/editeurs" class="current_link">@ViewData["Title"]</a>
+                </div>
+                <h2>@ViewData["Title"]</h2>
+            </div>
+        </div>
+    </div>
+    <!-- heading end -->
+    @* zwa9 start *@
+    <div class="form_all_container">
+        <div class="rectangle">
+
+        </div>
+        <div class="form_container">
+            <div class="form">
+                <h2>@ViewData["Title_2"] Info</h2>
+
+                <div class="flex-container">
+                    <div class="flex-row">
+                        <div>ID</div>
+                        <div>@Model.editeur.IDEditeur</div>
+                    </div>
+                    <div class="flex-row">
+                        <div>Name</div>
+                        <div>@Model.editeur.NomEditeur</div>
+                    </div>
+                    <div class="flex-row desc">
+                        <div>Description</div>
+                        <div>@Model.editeur.DescripEditeur</div>
+                    </div>
+                    <div class="flex-row">
+                        <div>Phone</div>
+                        <div>@Model.editeur.TelephoneEditeur</div>
+                    </div>
+                    <div class="flex-row">
+                        <div>Address</div>
+                        <div>@Model.editeur.AdresseEditeur</div>
+                    </div>
+                    <div class="livres">
+                        @if (Model.listeLivres.Count > 0)
+                        {
+                            <h2>Livres</h2>
+                            <p>L'editeur @Model.editeur.NomEditeur a @Model.listeLivres.Count livre(s) </p>
+                            <ul>
+                                @foreach (var livre in Model.listeLivres)
+                                {
+                                    <li>
+                                        <a asp-page="/Livres/Details" asp-route-id="@livre.IDLivre">@livre.Titre</a>
+                                    </li>
+                                }
+                            </ul>
+                        }
+                    </div>
+                </div>
+                <div class="button_container">
+                    <a asp-page="index"><i class='bx bx-chevron-left'></i> go back</a>
+                    <a  asp-page="Update" asp-route-id="@Model.editeur.IDEditeur" class="a_primary">Edit</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    @* zwa9 end *@
+
+</div>
